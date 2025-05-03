@@ -37,8 +37,8 @@ export const skills: Skill[] = [
     proficiency: 90
   },
   {
-    name: 'Canvas',
-    icon: 'paintbrush',
+    name: 'Canva',
+    icon: 'file-code',
     proficiency: 80
   }
-];
+]
