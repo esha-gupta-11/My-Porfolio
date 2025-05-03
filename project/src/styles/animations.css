@@ -1,0 +1,96 @@
+/* Custom Cursor */
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #8B5A2B;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.cursor-outline {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(139, 90, 43, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s;
+  display: none;
+}
+
+/* Only show custom cursor on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .cursor-dot, .cursor-outline {
+    display: block;
+  }
+  
+  * {
+    cursor: none !important;
+  }
+}
+
+/* Mouse hover animation for links and buttons */
+a:hover ~ .cursor-outline,
+button:hover ~ .cursor-outline {
+  width: 50px;
+  height: 50px;
+  border-color: rgba(139, 90, 43, 0.8);
+}
+
+/* Animation for slow spinning */
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slow-spin {
+  animation: slow-spin 15s linear infinite;
+}
+
+/* Dark mode transitions */
+.dark {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Hover image zoom */
+.hover-zoom {
+  transition: transform 0.5s ease;
+}
+.hover-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* Fade Up animation with intersection observer */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1.5s infinite;
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esha | MERN Stack Developer</title>
+    <meta name="description" content="Portfolio of Esha, a MERN Stack Developer specializing in building beautiful and functional web applications.">
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Custom cursor functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const cursorDot = document.getElementById('cursor-dot');
+        const cursorOutline = document.getElementById('cursor-outline');
+        
+        if (cursorDot && cursorOutline && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+          document.addEventListener('mousemove', function(e) {
+            cursorDot.style.left = e.clientX + 'px';
+            cursorDot.style.top = e.clientY + 'px';
+            
+            // Add some delay to cursor outline
+            setTimeout(() => {
+              cursorOutline.style.left = e.clientX + 'px';
+              cursorOutline.style.top = e.clientY + 'px';
+            }, 50);
+          });
+          
+          // Adjust cursor when hovering over links and buttons
+          const interactiveElements = document.querySelectorAll('a, button');
+          interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', function() {
+              cursorOutline.style.width = '50px';
+              cursorOutline.style.height = '50px';
+              cursorOutline.style.borderColor = 'rgba(139, 90, 43, 0.8)';
+            });
+            
+            el.addEventListener('mouseleave', function() {
+              cursorOutline.style.width = '30px';
+              cursorOutline.style.height = '30px';
+              cursorOutline.style.borderColor = 'rgba(139, 90, 43, 0.5)';
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
