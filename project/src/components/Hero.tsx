@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
               Frontend Developer
             </h2>
             <p className="text-lg text-[#3F2305]/80 dark:text-[#F5F5DC]/80 mb-8 max-w-lg">
-              I specialize in creating beautiful, responsive web applications with React and modern web technologies. 
+              I specialize in creating interactive, responsive web applications with React and modern web technologies. 
               With full-stack knowledge, I build complete solutions that deliver exceptional user experiences.
             </p>
             <div className="flex flex-wrap gap-4">

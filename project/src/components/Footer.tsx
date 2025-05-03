@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <h3 className="text-xl font-bold text-[#D2B48C]">Esha</h3>
-            <p className="text-sm mt-1">MERN Stack Developer</p>
+            <p className="text-sm mt-1">Frontend Developer</p>
           </div>
           
           <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">

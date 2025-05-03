@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Section from './ui/Section';
 import Card from './ui/Card';
 import Button from './ui/Button';
-import { MapPin, Mail, Phone, Send, Check } from 'lucide-react';
+import { MapPin, Mail,  Send, Check } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 
 const Contact: React.FC = () => {
@@ -183,17 +183,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
               
-              <div className="flex items-start">
-                <div className="p-2 bg-[#8B5A2B]/10 dark:bg-[#8B5A2B]/20 rounded-md text-[#8B5A2B] dark:text-[#D2B48C] mr-3">
-                  <Phone size={20} />
-                </div>
-                <div>
-                  <h4 className="font-medium text-[#3F2305] dark:text-[#F5F5DC]">Phone</h4>
-                  <NavLink to="tel:+14155551234" className="text-[#3F2305]/70 dark:text-[#F5F5DC]/70 hover:text-[#8B5A2B] dark:hover:text-[#D2B48C]">
-                    +91 9692562452
-                  </NavLink>
-                </div>
-              </div>
+           
             </div>
           </Card>
           
