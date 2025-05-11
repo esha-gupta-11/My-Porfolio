@@ -80,12 +80,12 @@ const Header: React.FC = () => {
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <a
-                key={item.to}
-                href={item.to}
+                key={item.href}
+                href={item.href}
                 className={`
                   text-[#3F2305] dark:text-[#F5F5DC] hover:text-[#8B5A2B] dark:hover:text-[#D2B48C] transition-colors
                   relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-[#8B5A2B] after:transition-all
-                  ${activeSection === item.to.substring(1) 
+                  ${activeSection === item.href.substring(1) 
                     ? 'after:w-full' 
                     : 'after:w-0 hover:after:w-full'}
                 `}
@@ -131,12 +131,12 @@ const Header: React.FC = () => {
         <nav className="flex flex-col items-center justify-center h-full">
           {navigation.map((item) => (
             <a
-              key={item.to}
-              href={item.to}
+              key={item.href}
+              href={item.href}
               onClick={closeMenu}
               className={`
                 py-4 text-xl font-medium text-[#3F2305] dark:text-[#F5F5DC] hover:text-[#8B5A2B] dark:hover:text-[#D2B48C]
-                ${activeSection === item.to.substring(1) ? 'text-[#8B5A2B] dark:text-[#D2B48C]' : ''}
+                ${activeSection === item.href.substring(1) ? 'text-[#8B5A2B] dark:text-[#D2B48C]' : ''}
               `}
             >
               {item.label}

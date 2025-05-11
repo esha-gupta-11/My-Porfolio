@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
                 GitHub
               </NavLink>
               <NavLink
-                to="www.linkedin.com/in/esha-gupta-aa2889309"
+                to="https://www.linkedin.com/in/esha-gupta-aa2889309"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#F5F5DC]/60 hover:text-[#D2B48C] transition-colors"

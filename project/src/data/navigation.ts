@@ -4,22 +4,22 @@ import { NavItem } from '../types';
 export const navigation: NavItem[] = [
   {
     label: 'Home',
-    to: '#home'
+    href: '#home'
   },
   {
     label: 'About',
-    to: '#about'
+    href: '#about'
   },
   {
     label: 'Projects',
-    to: '#projects'
+    href: '#projects'
   },
   {
     label: 'Skills',
-    to: '#skills'
+    href: '#skills'
   },
   {
     label: 'Contact',
-    to: '#contact'
+    href: '#contact'
   }
 ];

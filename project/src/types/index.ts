@@ -18,7 +18,7 @@ export interface Project {
 
 export interface NavItem {
   label: string;
-  to: string;
+  href: string;
 }
 
 export interface Skill {
